@@ -6,6 +6,7 @@ import {
   property,
 } from 'lit-element';
 
+import('./components/pokemon-data').then();
 @customElement('app-component')
 export default class App extends LitElement {
   private static messageTemplateResult(): TemplateResult {
@@ -36,7 +37,7 @@ export default class App extends LitElement {
       <h1>ESLint Testing</h1>
       <p>This project will test eslinting</p>
       ${App.messageTemplateResult()}
-      <pre>${JSON.stringify(this.pokemonData, null, 2)}</pre>
+      <pokemon-data .data="${this.pokemonData}"></pokemon-data>
     `;
   }
 }
