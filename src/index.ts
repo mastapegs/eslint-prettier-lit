@@ -2,7 +2,7 @@ import { LitElement, html, customElement } from "lit-element";
 
 @customElement("app-component")
 export default class App extends LitElement {
-  private messageHTMLTemplate() {
+  private messageTemplateResult() {
     return html`
       <p>Integrates with:</p>
       <ul>
@@ -17,7 +17,7 @@ export default class App extends LitElement {
     return html`
       <h1>ESLint Testing</h1>
       <p>This project will test eslinting</p>
-      ${this.messageHTMLTemplate()}
+      ${this.messageTemplateResult()}
     `;
   }
 }
