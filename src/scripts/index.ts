@@ -26,10 +26,10 @@ export default class App extends LitElement {
     return data;
   }
 
-  @property() pokemonData = {};
+  @property() pokemonResponseData = {};
 
   async firstUpdated(): Promise<void> {
-    this.pokemonData = await App.getPokemonData();
+    this.pokemonResponseData = await App.getPokemonData();
   }
 
   render(): TemplateResult {
@@ -37,7 +37,7 @@ export default class App extends LitElement {
       <h1>ESLint Testing</h1>
       <p>This project will test eslinting</p>
       ${App.messageTemplateResult()}
-      <pokemon-data .data="${this.pokemonData}"></pokemon-data>
+      <pokemon-data .data="${this.pokemonResponseData}"></pokemon-data>
     `;
   }
 }
