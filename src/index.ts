@@ -1,8 +1,8 @@
-import { LitElement, html, customElement } from "lit-element";
+import { LitElement, html, customElement, TemplateResult } from 'lit-element';
 
-@customElement("app-component")
+@customElement('app-component')
 export default class App extends LitElement {
-  private messageTemplateResult() {
+  private static messageTemplateResult(): TemplateResult {
     return html`
       <p>Integrates with:</p>
       <ul>
@@ -13,11 +13,11 @@ export default class App extends LitElement {
     `;
   }
 
-  render() {
+  static render(): TemplateResult {
     return html`
       <h1>ESLint Testing</h1>
       <p>This project will test eslinting</p>
-      ${this.messageTemplateResult()}
+      ${App.messageTemplateResult()}
     `;
   }
 }
