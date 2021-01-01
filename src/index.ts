@@ -13,6 +13,12 @@ export default class App extends LitElement {
     `;
   }
 
+  private static async getPokemonData(): Promise<object[]> {
+    const response = await fetch('');
+    const data = await response.json();
+    return data;
+  }
+
   render(): TemplateResult {
     return html`
       <h1>ESLint Testing</h1>
