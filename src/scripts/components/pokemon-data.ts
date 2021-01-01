@@ -11,6 +11,9 @@ export default class PokemonData extends LitElement {
   @property({ type: Object }) data = {};
 
   render(): TemplateResult {
-    return html` <pre>${JSON.stringify(this.data, null, 2)}</pre> `;
+    return html`
+      <p>Pokemon Data</p>
+      <pre>${JSON.stringify(this.data, null, 2)}</pre>
+    `;
   }
 }
