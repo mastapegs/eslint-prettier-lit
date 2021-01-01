@@ -13,7 +13,7 @@ export default class App extends LitElement {
     `;
   }
 
-  static render(): TemplateResult {
+  render(): TemplateResult {
     return html`
       <h1>ESLint Testing</h1>
       <p>This project will test eslinting</p>
