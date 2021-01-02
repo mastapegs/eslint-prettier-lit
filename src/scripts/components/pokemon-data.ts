@@ -17,7 +17,8 @@ export default class PokemonData extends LitElement {
       <p>Pokemon Data</p>
       <pre>${JSON.stringify(this.data, null, 2)}</pre>
       <br />
-      ${this.data.results.map(
+      ${this.data.results &&
+      this.data.results.map(
         (pokemon: { name: string; url: string }) =>
           html`<single-pokemon .pokemon="${pokemon}"></single-pokemon>`
       )}
